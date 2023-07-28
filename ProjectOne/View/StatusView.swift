@@ -7,7 +7,7 @@ struct StatusView: View {
         GeometryReader { geometry in
             NavigationStack {
                 ZStack {
-                    Color("AppColors")
+                    Color("AppWhite")
                         .edgesIgnoringSafeArea(.top)
                     VStack {
 

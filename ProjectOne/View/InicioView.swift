@@ -7,7 +7,7 @@ struct InicioView: View {
         GeometryReader { geometry in
             NavigationStack {
                 ZStack {
-                    Color("AppColors")
+                    Color("AppWhite")
                         .edgesIgnoringSafeArea(.top)
                     
                     ScrollView {
@@ -15,6 +15,10 @@ struct InicioView: View {
                             // Destaques
                             VStack(alignment: .leading) {
                                 Text("Destaques")
+                                    .font(
+                                        .title3
+                                            .weight(.bold)
+                                    )
                                 CollectionView()
                             }
                             .padding()
@@ -22,6 +26,10 @@ struct InicioView: View {
                             // Palestras
                             VStack(alignment: .leading) {
                                 Text("Palestras")
+                                    .font(
+                                        .title3
+                                            .weight(.bold)
+                                    )
                                 CollectionView()
                             }
                             .padding()
@@ -29,6 +37,10 @@ struct InicioView: View {
                             // Eventos
                             VStack(alignment: .leading) {
                                 Text("Eventos")
+                                    .font(
+                                        .title3
+                                            .weight(.bold)
+                                    )
                                 CollectionView()
                             }
                             .padding()
@@ -36,6 +48,10 @@ struct InicioView: View {
                             // Cursos
                             VStack(alignment: .leading) {
                                 Text("Cursos")
+                                    .font(
+                                        .title3
+                                            .weight(.bold)
+                                    )
                                 CollectionView()
                             }
                             .padding()

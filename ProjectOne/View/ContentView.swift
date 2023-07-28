@@ -3,18 +3,27 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        TabView {
+            InicioView() // ambíguo ??
+                .tabItem {
+                    Label("Início", systemImage: "house.circle")
+                }
+            
+            SalvoView()
+                .tabItem {
+                    Label("Salvo", systemImage: "bookmark.circle")
+                }
+            
+            StatusView()
+                .tabItem {
+                    Label("Status", systemImage: "person.circle")
+                }
         }
-        .padding()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        MasterView()
+        ContentView()
     }
 }

@@ -11,13 +11,15 @@ struct CollectionView: View {
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: spacing) {
-                // For Each
-                RoundedRectangle(cornerRadius: radius)
-                    .frame(width: width, height: height)
-                
+                NavigationLink {
+                    DescriptionView()
+                } label: {
+                    // For Each
+                    RoundedRectangle(cornerRadius: radius)
+                        .foregroundColor(.white)
+                        .frame(width: width, height: height)
+                }
             }
         }
     }
 }
-
-// Transformar em uma classe para ser compatível com .json e ler as informações necessárias
